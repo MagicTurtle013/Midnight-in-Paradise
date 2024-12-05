@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Playables;
+﻿using UnityEngine;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -26,9 +23,9 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Casing Ejection Speed")]
     [SerializeField] private float ejectPower = 150f;
 
-    private Weapon weapon;
-    private Ammo ammo;
-    private AmmoType ammoType;
+    private Weapon _weapon;
+    private Ammo _ammo;
+    private AmmoType _ammoType;
 
     void Start()
     {
@@ -38,22 +35,15 @@ public class SimpleShoot : MonoBehaviour
         if (gunAnimator == null)
             gunAnimator = GetComponentInChildren<Animator>();
 
-        weapon = GetComponent<Weapon>(); // Get the reference to the 'Weapon' component
-        ammo = GetComponent<Ammo>(); // Get the reference to the 'Ammo' component
+        _weapon = transform.parent.GetComponent<Weapon>(); // Get the reference to the 'Weapon' component
+        _ammo = GetComponent<Ammo>(); // Get the reference to the 'Ammo' component
     }
 
     public void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            if (ammo.GetCurrentAmmo(ammoType) > 0)
-            {
-                weapon.PlayFireAnimation();
-            }
-            else
-            {
-                // Ammo is depleted, do not play the animation
-            }
+            _weapon.PlayFireAnimation();
         }
     }
 

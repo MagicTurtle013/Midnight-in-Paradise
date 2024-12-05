@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-
-    private bool wasMouseLockedBeforePause;
-
+    
+    private bool _wasMouseLockedBeforePause;
+    private static bool _gameIsPaused;
+    private bool _playerController;
+    
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -20,7 +19,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (GameIsPaused)
+            if (_gameIsPaused)
             {
                 Resume();
             }
@@ -35,9 +34,9 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
-        Cursor.lockState = wasMouseLockedBeforePause ? CursorLockMode.Locked : CursorLockMode.None;
-        Cursor.visible = !wasMouseLockedBeforePause;
+        _gameIsPaused = false;
+        Cursor.lockState = _wasMouseLockedBeforePause ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !_wasMouseLockedBeforePause;
         GetComponent<StarterAssets.FirstPersonController>().enabled = true;
         FindObjectOfType<WeaponSwitcher>().enabled = true;
         FindObjectOfType<WeaponZoom>().enabled = true;
@@ -45,13 +44,13 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
-        wasMouseLockedBeforePause = Cursor.lockState == CursorLockMode.Locked;
+        _wasMouseLockedBeforePause = Cursor.lockState == CursorLockMode.Locked;
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
-        GameIsPaused = true;
+        _gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        GetComponent<StarterAssets.FirstPersonController>().enabled = false;
+        //gameObject.GetComponent<StarterAssets.FirstPersonController>().enabled = false;
         FindObjectOfType<WeaponSwitcher>().enabled = false;
         FindObjectOfType<WeaponZoom>().enabled = false;
     }
