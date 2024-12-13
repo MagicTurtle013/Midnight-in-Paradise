@@ -1,4 +1,4 @@
-using Cinemachine;
+using Unity.Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +27,8 @@ public class CinemachineShake : MonoBehaviour
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
             cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
-        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain= intensity;
+        cinemachineBasicMultiChannelPerlin.AmplitudeGain = intensity;
+        cinemachineBasicMultiChannelPerlin.AmplitudeGain = intensity;
 
         startingIntensity= intensity;
         shakeTimerTotal = time;
@@ -45,7 +46,7 @@ public class CinemachineShake : MonoBehaviour
                 CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
                 cinemachineVirtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
-                cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 
+                cinemachineBasicMultiChannelPerlin.AmplitudeGain = 
                     Mathf.Lerp(startingIntensity, 0f, (1-(shakeTimer / shakeTimerTotal)));
             }
         }
