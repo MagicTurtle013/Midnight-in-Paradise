@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ProBuilder
+/[Pp]rojectSettings/Packages/com.unity.probuilder/Settings.json
+/[Pp]rojectSettings/Packages/com.unity.testtools.codecoverage/Settings.json
