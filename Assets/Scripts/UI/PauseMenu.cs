@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,7 +38,7 @@ public class PauseMenu : MonoBehaviour
         _gameIsPaused = false;
         Cursor.lockState = _wasMouseLockedBeforePause ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = !_wasMouseLockedBeforePause;
-        //GetComponent<StarterAssets.FirstPersonController>().enabled = true;
+        //GetComponent<PlayerMovement>().enabled = true;
         FindObjectOfType<WeaponSwitcher>().enabled = true;
         FindObjectOfType<WeaponZoom>().enabled = true;
     }
@@ -50,7 +51,7 @@ public class PauseMenu : MonoBehaviour
         _gameIsPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        //gameObject.GetComponent<StarterAssets.FirstPersonController>().enabled = false;
+        //GetComponent<PlayerMovement>().enabled = true;
         FindObjectOfType<WeaponSwitcher>().enabled = false;
         FindObjectOfType<WeaponZoom>().enabled = false;
     }
