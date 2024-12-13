@@ -1,14 +1,16 @@
 // Created on 13
 
+using NUnit.Framework;
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+using UnityEngine.Serialization;
+#if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
 
 namespace Player
 {
     [RequireComponent(typeof(CharacterController))]
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
+#if ENABLE_INPUT_SYSTEM
     [RequireComponent(typeof(PlayerInput))]
 #endif
     public class PlayerMovement : MonoBehaviour
@@ -19,8 +21,14 @@ namespace Player
         [Tooltip("Sprint speed of the character in m/s")]
         public float SprintSpeed = 6.0f;
 
-        [Tooltip("Rotation speed of the character")]
-        public float RotationSpeed = 1.0f;
+
+        [Tooltip("Rotation speed of the character")] [field: SerializeField]
+        public float BaseRotationSpeed { get; private set; } = 1.0f;
+
+        /// <summary>
+        /// Rotation speed used in movement calculations, modified by the base rotation speed value above
+        /// </summary>
+        [HideInInspector] public float RotationSpeed;
 
         [Tooltip("Acceleration and deceleration")]
         public float SpeedChangeRate = 10.0f;
@@ -65,7 +73,7 @@ namespace Player
 
         // player
         private float _speed;
-        private float _rotationVelocity;
+        float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
 
