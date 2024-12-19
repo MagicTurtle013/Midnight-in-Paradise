@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
         _gameIsPaused = false;
         Cursor.lockState = _wasMouseLockedBeforePause ? CursorLockMode.Locked : CursorLockMode.None;
         Cursor.visible = !_wasMouseLockedBeforePause;
-        //GetComponent<PlayerMovement>().enabled = true;
+
         FindObjectOfType<WeaponSwitcher>().enabled = true;
         FindObjectOfType<WeaponZoom>().enabled = true;
     }

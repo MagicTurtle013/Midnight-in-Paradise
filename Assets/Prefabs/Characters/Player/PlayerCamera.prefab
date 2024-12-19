@@ -243,6 +243,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3810794189637405409}
     m_Modifications:
+    - target: {fileID: 4495285268151997222, guid: e267ea14160e46e4a9701d5784344248, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2465093080826160648}
+    - target: {fileID: 6762765054048163646, guid: e267ea14160e46e4a9701d5784344248, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 2465093080826160648}
     - target: {fileID: 6912501669185421642, guid: e267ea14160e46e4a9701d5784344248, type: 3}
       propertyPath: FPCamera
       value: 

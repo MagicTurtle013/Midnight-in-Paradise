@@ -301,7 +301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
-  cinemachineShake: {fileID: 0}
   shakeIntensity: 15
   shakeDuration: 0.15
   HealthText: {fileID: 0}
@@ -523,6 +522,14 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 8820621712134064391}
+    - target: {fileID: 2740338497088544591, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 8820621712134064391}
+    - target: {fileID: 2740338497088544591, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: weaponAnimator
+      value: 
+      objectReference: {fileID: 5944457222675807583}
     - target: {fileID: 3810794189637405409, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -563,6 +570,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4912847934558400801, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: m_Name
+      value: Crossbow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026016660537088855, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: ammoSlot
+      value: 
+      objectReference: {fileID: 8820621712134064391}
+    - target: {fileID: 5026016660537088855, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: gunAnimator
+      value: 
+      objectReference: {fileID: 6871867463651851284}
+    - target: {fileID: 5026016660537088855, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: weaponAnimator
+      value: 
+      objectReference: {fileID: 6871867463651851284}
     - target: {fileID: 5871401946622711345, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -591,6 +614,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1952337825865418023, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5944457222675807583}
     - targetCorrespondingSourceObject: {fileID: 4912847934558400801, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6871867463651851284}
@@ -611,6 +637,33 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 991177ba3c1478f4a872ff26d79659f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &5007568752154641557 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1952337825865418023, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+  m_PrefabInstance: {fileID: 6802245057723384242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5944457222675807583
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007568752154641557}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03d1fe4e93c9d4445b3a611df2ee5713, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
