@@ -218,9 +218,6 @@ namespace MpPlayerMovement
         {
             if (Grounded)
             {
-                // reset the fall timeout timer
-                //_fallTimeoutDelta = FallTimeout;
-
                 // stop our velocity dropping infinitely when grounded
                 if (_verticalVelocity < 0.0f)
                 {
