@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using MpPlayerInput;
+using UnityEngine.Serialization;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -18,8 +20,7 @@ namespace MpPlayerMovement
 
         [Tooltip("Sprint speed of the character in m/s")]
         public float SprintSpeed = 6.0f;
-
-
+        
         [Tooltip("Rotation speed of the character")] [field: SerializeField]
         public float BaseRotationSpeed { get; private set; } = 1.0f;
 
@@ -41,9 +42,6 @@ namespace MpPlayerMovement
         [Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
         public float JumpTimeout = 0.1f;
 
-        [Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
-        public float FallTimeout = 0.15f;
-
         [Header("Player Grounded")]
         [Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
         public bool Grounded = true;
@@ -51,7 +49,7 @@ namespace MpPlayerMovement
         [Tooltip("Useful for rough ground")] public float GroundedOffset = -0.14f;
 
         [Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
-        public float GroundedRadius = 0.5f;
+        private float _groundedRadius;
 
         [Tooltip("What layers the character uses as ground")]
         public LayerMask GroundLayers;
@@ -71,6 +69,7 @@ namespace MpPlayerMovement
 
         // player
         private float _speed;
+        private Vector3 _inputDirection;
         float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
@@ -116,16 +115,17 @@ namespace MpPlayerMovement
 #if ENABLE_INPUT_SYSTEM
             _playerInput = GetComponent<PlayerInput>();
 #endif
-
+            
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
+            _groundedRadius = _controller.radius;
         }
 
         private void Update()
         {
+            Move();
             JumpAndGravity();
             GroundedCheck();
-            Move();
         }
 
         private void LateUpdate()
@@ -138,7 +138,7 @@ namespace MpPlayerMovement
             // set sphere position, with offset
             Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset,
                 transform.position.z);
-            Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers,
+            Grounded = Physics.CheckSphere(spherePosition, _groundedRadius, GroundLayers,
                 QueryTriggerInteraction.Ignore);
         }
 
@@ -163,7 +163,7 @@ namespace MpPlayerMovement
                 transform.Rotate(Vector3.up * _rotationVelocity);
             }
         }
-        
+
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
@@ -198,19 +198,22 @@ namespace MpPlayerMovement
                 _speed = targetSpeed;
             }
 
-            // normalise input direction
-            Vector3 inputDirection = new Vector3(_input.Move.x, 0.0f, _input.Move.y).normalized;
-
-            // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-            // if there is a move input rotate player when the player is moving
-            if (_input.Move != Vector2.zero)
+            // normalise input direction. Direction should only be changed if the player is grounded as the player
+            // Cannot change direction mid-air
+            if (_controller.isGrounded)
             {
-                // move
-                inputDirection = transform.right * _input.Move.x + transform.forward * _input.Move.y;
+                _inputDirection = new Vector3(_input.Move.x, 0.0f, _input.Move.y).normalized;
+                
+                // note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
+                // if there is a move input rotate player when the player is moving
+                if (_input.Move != Vector2.zero)
+                {
+                    // move
+                    _inputDirection = transform.right * _input.Move.x + transform.forward * _input.Move.y;
+                }
             }
-
-            // move the player
-            _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) +
+            
+            _controller.Move(_inputDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
         }
 
@@ -227,11 +230,11 @@ namespace MpPlayerMovement
                 // Jump
                 if (_input.Jump && _jumpTimeoutDelta <= 0.0f)
                 {
-                    // the square root of H * -2 * G = how much velocity needed to reach desired height
-                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+                    // the square root of height * -2 * G = how much velocity needed to reach desired height
+                    _verticalVelocity = Mathf.Sqrt(JumpHeight * 2f * Math.Abs(Gravity));
                 }
 
-                // jump timeout
+                // Jump timeout
                 if (_jumpTimeoutDelta >= 0.0f)
                 {
                     _jumpTimeoutDelta -= Time.deltaTime;
@@ -271,7 +274,7 @@ namespace MpPlayerMovement
             // when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
             Gizmos.DrawSphere(
                 new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z),
-                GroundedRadius);
+                _groundedRadius);
         }
     }
 }
