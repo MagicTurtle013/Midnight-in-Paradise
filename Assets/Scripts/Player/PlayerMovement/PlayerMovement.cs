@@ -94,7 +94,7 @@ namespace MpPlayerMovement
             get
             {
 #if ENABLE_INPUT_SYSTEM
-                return _playerInput.currentControlScheme == "KeyboardMouse";
+                return _playerInput?.currentControlScheme == "KeyboardMouse";
 #else
 				return false;
 #endif
@@ -149,8 +149,8 @@ namespace MpPlayerMovement
             // if there is an input
             if (_input.Look.sqrMagnitude >= _threshold)
             {
-                //Don't multiply mouse input by Time.deltaTime
-                float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
+                // Separate Camera rotation from frame rate
+                float deltaTimeMultiplier = Time.deltaTime;
 
                 _cinemachineTargetPitch += _input.Look.y * RotationSpeed * deltaTimeMultiplier;
                 _rotationVelocity = _input.Look.x * RotationSpeed * deltaTimeMultiplier;
@@ -165,8 +165,7 @@ namespace MpPlayerMovement
                 transform.Rotate(Vector3.up * _rotationVelocity);
             }
         }
-
-
+        
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
