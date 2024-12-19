@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints = 100f;
-    public CinemachineShake cinemachineShake;
     [SerializeField] float shakeIntensity = 1.0f;
     [SerializeField] float shakeDuration = 0.5f;
     [SerializeField] TextMeshProUGUI HealthText;
@@ -49,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
         {
             StartCoroutine(AnimateHealthText());
             StartCoroutine(FlashHealthTextOnDamage());
-            cinemachineShake.ShakeCamera(shakeIntensity, shakeDuration);
+            CinemachineShake.Instance.ShakeCamera(shakeIntensity, shakeDuration);
         }
     }
 

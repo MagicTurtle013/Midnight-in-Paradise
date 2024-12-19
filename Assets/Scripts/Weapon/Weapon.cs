@@ -58,18 +58,22 @@ public class Weapon : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        canShoot = false;
-        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
+        if (ammoSlot.GetCurrentAmmo(ammoType) <= 0)
         {
-            ProcessRaycast();
-            CinemachineShake.Instance.ShakeCamera(.3f, .1f);
-            ammoSlot.ReduceCurrentAmmo(ammoType);
-
-            if (!isRecoiling)
-            {
-                StartCoroutine(Recoil());
-            }
+            yield break;
         }
+
+        canShoot = false;
+
+        ProcessRaycast();
+        CinemachineShake.Instance.ShakeCamera(.3f, .1f);
+        ammoSlot.ReduceCurrentAmmo(ammoType);
+
+        if (!isRecoiling)
+        {
+            StartCoroutine(Recoil());
+        }
+
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
     }

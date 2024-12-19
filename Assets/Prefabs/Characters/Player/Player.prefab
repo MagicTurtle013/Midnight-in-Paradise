@@ -514,7 +514,7 @@ PrefabInstance:
     - target: {fileID: 548154221564511011, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: FPCamera
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8958689693871433658}
     - target: {fileID: 548154221564511011, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: ammoSlot
       value: 
@@ -625,5 +625,10 @@ Animator:
 --- !u!4 &7675476230446484307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3810794189637405409, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+  m_PrefabInstance: {fileID: 6802245057723384242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &8958689693871433658 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2465093080826160648, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
   m_PrefabInstance: {fileID: 6802245057723384242}
   m_PrefabAsset: {fileID: 0}
