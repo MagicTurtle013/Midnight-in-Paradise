@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Player;
+using MpPlayerMovement;
 using UnityEngine;
 
 public class DeathHandler : MonoBehaviour

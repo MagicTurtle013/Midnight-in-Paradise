@@ -49,7 +49,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247318908225274139}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -369,10 +369,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d36f3f79ad63ee84dbb88e9ca2b125bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  move: {x: 0, y: 0}
-  look: {x: 0, y: 0}
-  jump: 0
-  sprint: 0
+  Move: {x: 0, y: 0}
+  Look: {x: 0, y: 0}
+  Jump: 0
+  Sprint: 0
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
@@ -390,7 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 10
   SprintSpeed: 13
-  <BaseRotationSpeed>k__BackingField: 1
+  <BaseRotationSpeed>k__BackingField: 10
   RotationSpeed: 1
   SpeedChangeRate: 8
   JumpHeight: 1.2
@@ -514,6 +514,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 8130315468197866577}
     m_Modifications:
     - target: {fileID: 548154221564511011, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: FPCamera
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 548154221564511011, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 8820621712134064391}
@@ -561,6 +565,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5871401946622711345, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871401946622711345, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871401946622711345, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871401946622711345, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871401946622711345, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7452960041306238735, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: m_Name
       value: PlayerCamera
@@ -568,8 +592,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4912847934558400801, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6871867463651851284}
   m_SourcePrefab: {fileID: 100100000, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+--- !u!1 &1894780682205343891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4912847934558400801, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+  m_PrefabInstance: {fileID: 6802245057723384242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6871867463651851284
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894780682205343891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 991177ba3c1478f4a872ff26d79659f8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &7675476230446484307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3810794189637405409, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
