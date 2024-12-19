@@ -43807,11 +43807,81 @@ PrefabInstance:
       propertyPath: ammoText
       value: 
       objectReference: {fileID: 1300266288}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8674441471128510205, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5007568752154641557, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5311480923038823270}
   m_SourcePrefab: {fileID: 100100000, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+--- !u!20 &5311480923038823264 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8958689693871433658, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+  m_PrefabInstance: {fileID: 5311480923038823263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5311480923038823265 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8820621712134064391, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+  m_PrefabInstance: {fileID: 5311480923038823263}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef5776d4eee39e46b32eab6a8d2a404, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &5311480923038823266 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4560066403282066684, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+  m_PrefabInstance: {fileID: 5311480923038823263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5311480923038823267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4560356370406551048, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+  m_PrefabInstance: {fileID: 5311480923038823263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5311480923038823268 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007568752154641557, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+  m_PrefabInstance: {fileID: 5311480923038823263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5311480923038823269 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5944457222675807583, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+  m_PrefabInstance: {fileID: 5311480923038823263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5311480923038823270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311480923038823268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be84e4d7829855419c06b94e56bd135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPCamera: {fileID: 5311480923038823264}
+  range: 100
+  damage: 50
+  hitEffect: {fileID: 100002, guid: 3b1513bcb86426b4795879be6a128ed7, type: 3}
+  ammoSlot: {fileID: 5311480923038823265}
+  ammoType: 0
+  timeBetweenShots: 0.4
+  weaponAnimator: {fileID: 5311480923038823269}
+  ammoText: {fileID: 1300266288}
+  bulletPrefab: {fileID: 6804990658058999119, guid: 65c9f6563c561ee4e8905d1e6a32548b, type: 3}
+  casingPrefab: {fileID: 4362657251999731927, guid: 4cb20e8abae957146a8b78e670d3fe74, type: 3}
+  muzzleFlashPrefab: {fileID: 100006, guid: 4e7bc0a8b112c984fb16cf716888808f, type: 3}
+  barrelLocation: {fileID: 5311480923038823266}
+  casingExitLocation: {fileID: 5311480923038823267}
+  destroyTimer: 0.5
+  flashTimer: 0.04
+  shotPower: 3000
+  ejectPower: 350
 --- !u!1001 &8268599376243333412
 PrefabInstance:
   m_ObjectHideFlags: 0
