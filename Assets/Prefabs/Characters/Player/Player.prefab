@@ -126,8 +126,8 @@ GameObject:
   - component: {fileID: 8820621712134064391}
   - component: {fileID: 8667029885670886591}
   - component: {fileID: 3765257632685598746}
-  - component: {fileID: 4667203605758471209}
   - component: {fileID: 5489612145949000179}
+  - component: {fileID: 4667203605758471209}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -357,25 +357,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &4667203605758471209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4477340962950599949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36f3f79ad63ee84dbb88e9ca2b125bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Move: {x: 0, y: 0}
-  Look: {x: 0, y: 0}
-  Jump: 0
-  Sprint: 0
-  analogMovement: 0
-  cursorLocked: 1
-  cursorInputForLook: 1
 --- !u!114 &5489612145949000179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,16 +377,33 @@ MonoBehaviour:
   JumpHeight: 1.2
   Gravity: -30
   JumpTimeout: 0.1
-  FallTimeout: 0.15
   Grounded: 1
   GroundedOffset: -0.14
-  GroundedRadius: 0.5
   GroundLayers:
     serializedVersion: 2
     m_Bits: 1
   CinemachineCameraTarget: {fileID: 8130315468197866582}
   TopClamp: 89
   BottomClamp: -89
+--- !u!114 &4667203605758471209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4477340962950599949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36f3f79ad63ee84dbb88e9ca2b125bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Move: {x: 0, y: 0}
+  Look: {x: 0, y: 0}
+  Jump: 0
+  Sprint: 0
+  analogMovement: 0
+  cursorLocked: 1
+  cursorInputForLook: 1
 --- !u!1 &8130315468197866582
 GameObject:
   m_ObjectHideFlags: 0
