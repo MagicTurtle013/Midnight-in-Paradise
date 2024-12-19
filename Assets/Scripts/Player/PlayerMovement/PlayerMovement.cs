@@ -77,7 +77,6 @@ namespace MpPlayerMovement
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
-        private float _fallTimeoutDelta;
 
 
 #if ENABLE_INPUT_SYSTEM
@@ -120,7 +119,6 @@ namespace MpPlayerMovement
 
             // reset our timeouts on start
             _jumpTimeoutDelta = JumpTimeout;
-            _fallTimeoutDelta = FallTimeout;
         }
 
         private void Update()
@@ -221,7 +219,7 @@ namespace MpPlayerMovement
             if (Grounded)
             {
                 // reset the fall timeout timer
-                _fallTimeoutDelta = FallTimeout;
+                //_fallTimeoutDelta = FallTimeout;
 
                 // stop our velocity dropping infinitely when grounded
                 if (_verticalVelocity < 0.0f)
@@ -246,12 +244,6 @@ namespace MpPlayerMovement
             {
                 // reset the jump timeout timer
                 _jumpTimeoutDelta = JumpTimeout;
-
-                // fall timeout
-                if (_fallTimeoutDelta >= 0.0f)
-                {
-                    _fallTimeoutDelta -= Time.deltaTime;
-                }
 
                 // if we are not grounded, do not jump
                 _input.Jump = false;
