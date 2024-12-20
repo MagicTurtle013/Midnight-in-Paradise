@@ -1,41 +1,42 @@
 using System.Collections;
 using TMPro;
+using MpPlayerValues;
 using UnityEngine;
+
 
 public class Weapon : MonoBehaviour
 {
-    [Header("Funtional Settings")]
-    [SerializeField] Camera FPCamera;
+    [Header("Functional Settings")]
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 50f;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
     [SerializeField] float timeBetweenShots = 0.5f;
-    [SerializeField] Animator gunAnimator;
+    [SerializeField] protected Animator weaponAnimator;
     [SerializeField] TextMeshProUGUI ammoText;
 
-    bool canShoot = true;
+    [Tooltip("The gun resets between each shot")]
+    private bool _isGunReset = true;
 
-    private bool isRecoiling = false;
+    private bool isRecoiling;
     private Vector3 initialPosition;
 
-    void Start()
+    private void Start()
     {
-        initialPosition = transform.localPosition;
+        initialPosition = transform.position;
     }
 
     private void OnEnable()
     {
-        canShoot = true;
+        _isGunReset = true;
     }
 
-    void Update()
+    private void Update()
     {
         DisplayAmmo();
-        if (Input.GetMouseButtonDown(0) && canShoot == true)
+        if (Input.GetMouseButtonDown(0) && CanShoot())
         {
-            gunAnimator.SetTrigger("Fire");
             StartCoroutine(Shoot());
         }
 
@@ -51,33 +52,55 @@ public class Weapon : MonoBehaviour
         ammoText.text = currentAmmo.ToString();
     }
 
-    public void PlayFireAnimation()
+    private void PlayFireAnimation()
     {
-        gunAnimator.SetTrigger("Fire");
+        weaponAnimator?.SetTrigger("Fire");
     }
 
-    IEnumerator Shoot()
+    /// <summary>
+    /// Weapon must have ammo
+    /// </summary>
+    /// <returns></returns>
+    private bool CanShoot()
     {
-        canShoot = false;
-        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
-        {
-            ProcessRaycast();
-            CinemachineShake.Instance.ShakeCamera(.3f, .1f);
-            ammoSlot.ReduceCurrentAmmo(ammoType);
+        return ammoSlot.GetCurrentAmmo(ammoType) > 0
+            && _isGunReset;
+    }
 
-            if (!isRecoiling)
-            {
-                StartCoroutine(Recoil());
-            }
-        }
+    private IEnumerator Shoot()
+    {
+        _isGunReset = false;
+
+        ProcessRaycast();
+        PlayFireAnimation();
+        WeaponEffects();
+        SpawnProjectile();
+        CinemachineShake.Instance.ShakeCamera(.3f, .1f);
+        ammoSlot.ReduceCurrentAmmo(ammoType);
+
+        /*if (!isRecoiling)
+        {
+            StartCoroutine(Recoil());
+        }*/
+
         yield return new WaitForSeconds(timeBetweenShots);
-        canShoot = true;
+        _isGunReset = true;
+    }
+
+    protected virtual void SpawnProjectile()
+    {
+        Debug.LogWarning("SpawnProjectile not implemented");
+    }
+
+    protected virtual void WeaponEffects()
+    {
+        Debug.LogWarning("Weapon Effects not implemented");
     }
 
     private void ProcessRaycast()
     {
         RaycastHit hit;
-        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
+        if (Physics.Raycast(PlayerValues.Instance.FirstPersonCamera.transform.position, PlayerValues.Instance.FirstPersonCamera.transform.forward, out hit, range))
         {
             CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();

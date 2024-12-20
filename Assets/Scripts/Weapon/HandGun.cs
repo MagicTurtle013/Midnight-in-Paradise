@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-[AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
-public class SimpleShoot : MonoBehaviour
+public class HandGun : Weapon
 {
     [Header("Prefab References")]
     public GameObject bulletPrefab;
@@ -9,7 +8,6 @@ public class SimpleShoot : MonoBehaviour
     public GameObject muzzleFlashPrefab;
 
     [Header("Location References")]
-    [SerializeField] private Animator gunAnimator;
     [SerializeField] private Transform barrelLocation;
     [SerializeField] private Transform casingExitLocation;
 
@@ -23,37 +21,27 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Casing Ejection Speed")]
     [SerializeField] private float ejectPower = 150f;
 
-    private Weapon _weapon;
-    private Ammo _ammo;
-    private AmmoType _ammoType;
-
-    void Start()
+    private void Start()
     {
         if (barrelLocation == null)
             barrelLocation = transform;
-
-        if (gunAnimator == null)
-            gunAnimator = GetComponentInChildren<Animator>();
-
-        _weapon = transform.parent.GetComponent<Weapon>(); // Get the reference to the 'Weapon' component
-        _ammo = GetComponent<Ammo>(); // Get the reference to the 'Ammo' component
     }
 
-    public void Update()
+    protected override void SpawnProjectile()
     {
-        if (Input.GetButtonDown("Fire1"))
+        // Cancels if there's no bullet prefab
+        if (!bulletPrefab)
         {
-            _weapon.PlayFireAnimation();
+            return;
         }
-    }
-
-    public void SetFireAnimationTrigger()
-    {
-        gunAnimator.SetTrigger("Fire");
+        
+        // Create a bullet and add force to it in the direction of the barrel
+        GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
+        bullet.GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
     }
 
     // This function creates the bullet behavior
-    public void Shoot()
+    protected override void WeaponEffects()
     {
         if (muzzleFlashPrefab)
         {
@@ -70,20 +58,10 @@ public class SimpleShoot : MonoBehaviour
             // Destroy the muzzle flash object after flashTimer seconds
             Destroy(tempFlash, flashTimer);
         }
-
-        // Cancels if there's no bullet prefab
-        if (!bulletPrefab)
-        {
-            return;
-        }
-
-        // Create a bullet and add force to it in the direction of the barrel
-        GameObject bullet = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
-        bullet.GetComponent<Rigidbody>().AddForce(barrelLocation.forward * shotPower);
     }
 
     // This function creates a casing at the ejection slot
-    void CasingRelease()
+    private void CasingRelease()
     {
         // Cancels function if the ejection slot hasn't been set or there's no casing
         if (!casingExitLocation || !casingPrefab)

@@ -15,6 +15,8 @@ namespace MpPlayerMovement
     
     public class PlayerMovement : MonoBehaviour
     {
+        public static PlayerMovement Instance;
+        
         [Header("Player")] [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 4.0f;
 
@@ -101,6 +103,14 @@ namespace MpPlayerMovement
 
         private void Awake()
         {
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(this);
+            }
             // get a reference to our main camera
             if (_mainCamera == null)
             {
