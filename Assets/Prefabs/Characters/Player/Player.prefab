@@ -128,6 +128,7 @@ GameObject:
   - component: {fileID: 3765257632685598746}
   - component: {fileID: 5489612145949000179}
   - component: {fileID: 4667203605758471209}
+  - component: {fileID: 2087309263902804497}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -338,7 +339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fpsCamera: {fileID: 0}
-  fpsController: {fileID: 0}
   zoomedOutFOV: 60
   zoomedInFOV: 40
   zoomedOutSensitivity: 1
@@ -403,6 +403,19 @@ MonoBehaviour:
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
+--- !u!114 &2087309263902804497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4477340962950599949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778d714621719fb4a964d50a3cfdf06b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <FirstPersonCamera>k__BackingField: {fileID: 8958689693871433658}
 --- !u!1 &8130315468197866582
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,13 +623,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCamera
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2740338497088544591, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1952337825865418023, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5944457222675807583}
+    - targetCorrespondingSourceObject: {fileID: 1952337825865418023, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5628062753228299330}
     - targetCorrespondingSourceObject: {fileID: 4912847934558400801, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6871867463651851284}
@@ -648,6 +665,16 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &4560066403282066684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7002800470063340878, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+  m_PrefabInstance: {fileID: 6802245057723384242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4560356370406551048 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7003042591403405242, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
+  m_PrefabInstance: {fileID: 6802245057723384242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5007568752154641557 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1952337825865418023, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
@@ -675,6 +702,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5628062753228299330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5007568752154641557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be84e4d7829855419c06b94e56bd135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 100
+  damage: 50
+  hitEffect: {fileID: 100002, guid: 3b1513bcb86426b4795879be6a128ed7, type: 3}
+  ammoSlot: {fileID: 8820621712134064391}
+  ammoType: 0
+  timeBetweenShots: 0.4
+  weaponAnimator: {fileID: 5944457222675807583}
+  ammoText: {fileID: 0}
+  bulletPrefab: {fileID: 6804990658058999119, guid: 65c9f6563c561ee4e8905d1e6a32548b, type: 3}
+  casingPrefab: {fileID: 4362657251999731927, guid: 4cb20e8abae957146a8b78e670d3fe74, type: 3}
+  muzzleFlashPrefab: {fileID: 100006, guid: 4e7bc0a8b112c984fb16cf716888808f, type: 3}
+  barrelLocation: {fileID: 4560066403282066684}
+  casingExitLocation: {fileID: 4560356370406551048}
+  destroyTimer: 0.5
+  flashTimer: 0.04
+  shotPower: 3000
+  ejectPower: 350
 --- !u!4 &7675476230446484307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3810794189637405409, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}

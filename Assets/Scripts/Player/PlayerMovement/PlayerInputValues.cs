@@ -7,6 +7,7 @@ namespace MpPlayerInput
 {
 	public class PlayerInputValues : MonoBehaviour
 	{
+		public static PlayerInputValues Instance;
 		[Header("Character Input Values")] public Vector2 Move;
 		public Vector2 Look;
 		public bool Jump;
@@ -16,6 +17,18 @@ namespace MpPlayerInput
 
 		[Header("Mouse Cursor Settings")] public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
+
+		private void Awake()
+		{
+			if (Instance == null)
+			{
+				Instance = this;
+			}
+			else
+			{
+				Destroy(this);
+			}
+		}
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)

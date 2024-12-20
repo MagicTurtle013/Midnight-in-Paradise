@@ -1,11 +1,12 @@
 using System.Collections;
 using TMPro;
+using MpPlayerValues;
 using UnityEngine;
+
 
 public class Weapon : MonoBehaviour
 {
     [Header("Functional Settings")]
-    [SerializeField] Camera FPCamera;
     [SerializeField] float range = 100f;
     [SerializeField] float damage = 50f;
     [SerializeField] GameObject hitEffect;
@@ -99,7 +100,7 @@ public class Weapon : MonoBehaviour
     private void ProcessRaycast()
     {
         RaycastHit hit;
-        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
+        if (Physics.Raycast(PlayerValues.Instance.FirstPersonCamera.transform.position, PlayerValues.Instance.FirstPersonCamera.transform.forward, out hit, range))
         {
             CreateHitImpact(hit);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
