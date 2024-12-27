@@ -15881,6 +15881,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fc3051a8fbe3124ba2c8140181ef705, type: 3}
+--- !u!1001 &3632704491479677339
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2905867717956828032, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_Name
+      value: TimeHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -52.548386
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.182104
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.0676892
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388541112741106340, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
 --- !u!4 &5284075616043592022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6173349369553741876, guid: 0fc3051a8fbe3124ba2c8140181ef705, type: 3}
@@ -16060,6 +16117,78 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3848718745875353527, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: 72a3b736-424d-4468-9bf6-5f2c8ad4ba48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: bcfadc4f-bc30-49a5-80b8-ceaf3a947a67
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 0f541c03-6667-42e3-b245-95a9addc9f54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: f3860793-957e-4540-a517-a9f98cd6fa53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionId
+      value: 4fb2b9e1-2266-439e-b222-1a4e50234a02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionId
+      value: e30b2ae1-a08c-42a1-97e7-98bdb1d74fc5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: 'Player/Look[/Mouse/delta]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: 'Player/Jump[/Keyboard/space]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: 'Player/Sprint[/Keyboard/leftShift]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_ActionName
+      value: 'Player/Zoom[/Mouse/rightButton]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[5].m_ActionName
+      value: 'Player/ToggeTime[/Keyboard/t]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4477340962950599937, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4477340962950599946, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
@@ -16301,3 +16430,4 @@ SceneRoots:
   - {fileID: 1587508667}
   - {fileID: 595003503}
   - {fileID: 1872898849}
+  - {fileID: 3632704491479677339}

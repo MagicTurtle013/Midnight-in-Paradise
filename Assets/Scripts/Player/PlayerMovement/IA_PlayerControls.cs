@@ -71,6 +71,15 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleTime"",
+                    ""type"": ""Button"",
+                    ""id"": ""e30b2ae1-a08c-42a1-97e7-98bdb1d74fc5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -271,6 +280,17 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Zoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e1a5431-c02f-4619-bd63-6358fadb0781"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleTime"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -284,6 +304,7 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_Zoom = m_Player.FindAction("Zoom", throwIfNotFound: true);
+        m_Player_ToggleTime = m_Player.FindAction("ToggleTime", throwIfNotFound: true);
     }
 
     ~@IA_PlayerControls()
@@ -355,6 +376,7 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_Zoom;
+    private readonly InputAction m_Player_ToggleTime;
     public struct PlayerActions
     {
         private @IA_PlayerControls m_Wrapper;
@@ -364,6 +386,7 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @Zoom => m_Wrapper.m_Player_Zoom;
+        public InputAction @ToggleTime => m_Wrapper.m_Player_ToggleTime;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -388,6 +411,9 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
             @Zoom.started += instance.OnZoom;
             @Zoom.performed += instance.OnZoom;
             @Zoom.canceled += instance.OnZoom;
+            @ToggleTime.started += instance.OnToggleTime;
+            @ToggleTime.performed += instance.OnToggleTime;
+            @ToggleTime.canceled += instance.OnToggleTime;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -407,6 +433,9 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
             @Zoom.started -= instance.OnZoom;
             @Zoom.performed -= instance.OnZoom;
             @Zoom.canceled -= instance.OnZoom;
+            @ToggleTime.started -= instance.OnToggleTime;
+            @ToggleTime.performed -= instance.OnToggleTime;
+            @ToggleTime.canceled -= instance.OnToggleTime;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -431,5 +460,6 @@ public partial class @IA_PlayerControls: IInputActionCollection2, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnZoom(InputAction.CallbackContext context);
+        void OnToggleTime(InputAction.CallbackContext context);
     }
 }
