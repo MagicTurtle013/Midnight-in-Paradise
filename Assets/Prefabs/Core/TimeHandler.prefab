@@ -95,7 +95,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8986261518465118800}
         m_TargetAssemblyTypeName: TimeHandler, Assembly-CSharp
-        m_MethodName: OnTimeTogggled
+        m_MethodName: OnTimeToggled
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -56,7 +56,7 @@ namespace MpPlayerMovement
         [Tooltip("What layers the character uses as ground")]
         public LayerMask GroundLayers;
 
-        [Header("Cinemachine")]
+        [Header("Cinemachine & Camera")]
         [Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
         public GameObject CinemachineCameraTarget;
 
@@ -65,6 +65,9 @@ namespace MpPlayerMovement
 
         [Tooltip("How far in degrees can you move the camera down")]
         public float BottomClamp = -90.0f;
+
+        [Tooltip("Does the camera movement speed change with the timescale?")]
+        public bool IsCameraSpeedIndependent = true;
 
         // cinemachine
         private float _cinemachineTargetPitch;
@@ -158,7 +161,7 @@ namespace MpPlayerMovement
             if (_input.Look.sqrMagnitude >= _threshold)
             {
                 // Separate Camera rotation from frame rate
-                float deltaTimeMultiplier = Time.deltaTime;
+                float deltaTimeMultiplier = IsCameraSpeedIndependent ? Time.unscaledDeltaTime : Time.deltaTime;
 
                 _cinemachineTargetPitch += _input.Look.y * RotationSpeed * deltaTimeMultiplier;
                 _rotationVelocity = _input.Look.x * RotationSpeed * deltaTimeMultiplier;

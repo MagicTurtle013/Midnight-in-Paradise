@@ -177,7 +177,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 518996440}
+  m_Mesh: {fileID: 1454904855}
 --- !u!33 &489094
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -2563,7 +2563,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 134951548}
+  m_Mesh: {fileID: 874599621}
 --- !u!33 &116127334
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -3559,7 +3559,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 874599621}
+  m_Mesh: {fileID: 901192725}
 --- !u!33 &146539426
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -4841,7 +4841,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 910936448}
+  m_Mesh: {fileID: 532666901}
 --- !u!33 &204651696
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -10155,7 +10155,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 531967480}
 --- !u!33 &576070035
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -12518,7 +12518,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1856875743}
+  m_Mesh: {fileID: 134951548}
 --- !u!33 &653414516
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -15656,7 +15656,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 632545745}
+  m_Mesh: {fileID: 1465313082}
 --- !u!33 &797514488
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -17296,7 +17296,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 632545745}
+  m_Mesh: {fileID: 370787065}
 --- !u!33 &845980801
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -20586,7 +20586,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1723118720}
+  m_Mesh: {fileID: 1856217299}
 --- !u!33 &944905482
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -36905,7 +36905,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 370787065}
+  m_Mesh: {fileID: 631487417}
 --- !u!33 &1055021493
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -38059,7 +38059,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 484848022}
+  m_Mesh: {fileID: 632545745}
 --- !u!33 &1169641971
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -41148,7 +41148,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1856217299}
+  m_Mesh: {fileID: 534747973}
 --- !u!33 &1472718010
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -43827,7 +43827,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 613101605}
+  m_Mesh: {fileID: 1723118720}
 --- !u!33 &1589006295
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -46869,7 +46869,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 532666901}
+  m_Mesh: {fileID: 518996440}
 --- !u!33 &1782232771
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -47287,7 +47287,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_Mesh: {fileID: 1545767560}
 --- !u!33 &1783541975
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -49140,7 +49140,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 134951548}
+  m_Mesh: {fileID: 2001525340}
 --- !u!33 &1841078351
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -49972,7 +49972,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1723118720}
+  m_Mesh: {fileID: 930996984}
 --- !u!33 &1845680079
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -52013,7 +52013,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 531967480}
+  m_Mesh: {fileID: 1018875066}
 --- !u!33 &1904783592
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -56146,7 +56146,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 532666901}
+  m_Mesh: {fileID: 624430426}
 --- !u!33 &2013669717
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -57132,7 +57132,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1545767560}
+  m_Mesh: {fileID: 336065502}
 --- !u!33 &2117222337
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -58660,6 +58660,130 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_PostInfinity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[1].time
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[2].time
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[1].value
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[2].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[0].inSlope
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[2].inSlope
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[0].outSlope
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[2].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[2].outSlope
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[1].time
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _timeSlowedCurve.m_Curve.Array.data[2].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[0].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[1].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[0].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[1].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8986261518465118800, guid: dbacd4268aa642644a602d7bcdf3536c, type: 3}
+      propertyPath: _testCurve.m_CurveMax.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58986,6 +59110,10 @@ PrefabInstance:
       propertyPath: muzzleFlashParent
       value: 
       objectReference: {fileID: 178806219}
+    - target: {fileID: 5489612145949000179, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
+      propertyPath: IsCameraSpeedIndependent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5628062753228299330, guid: 0fee4f73d8d316d4db34494768f1fcd9, type: 3}
       propertyPath: ammoText
       value: 
