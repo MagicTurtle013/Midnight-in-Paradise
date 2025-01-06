@@ -133,10 +133,10 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &4477340962950599949
 GameObject:
@@ -249,69 +249,29 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6bc1aaf4-b110-4ff7-891e-5b9fe6f32c4d
-    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/XInputControllerWindows/leftStick]'
+      m_Calls: []
+    m_ActionId: 72a3b736-424d-4468-9bf6-5f2c8ad4ba48
+    m_ActionName: 'Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputLook
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 2690c379-f54d-45be-a724-414123833eb4
-    m_ActionName: 'Player/Look[/Mouse/delta,/XInputControllerWindows/rightStick]'
+      m_Calls: []
+    m_ActionId: bcfadc4f-bc30-49a5-80b8-ceaf3a947a67
+    m_ActionName: 'Player/Look[/Mouse/delta]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 8c4abdf8-4099-493a-aa1a-129acec7c3df
-    m_ActionName: 'Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]'
+      m_Calls: []
+    m_ActionId: 0f541c03-6667-42e3-b245-95a9addc9f54
+    m_ActionName: 'Player/Jump[/Keyboard/space]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: InputSprint
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 980e881e-182c-404c-8cbf-3d09fdb48fef
-    m_ActionName: 'Player/Sprint[/Keyboard/leftShift,/XInputControllerWindows/leftTrigger]'
+      m_Calls: []
+    m_ActionId: f3860793-957e-4540-a517-a9f98cd6fa53
+    m_ActionName: 'Player/Sprint[/Keyboard/leftShift]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 4fb2b9e1-2266-439e-b222-1a4e50234a02
+    m_ActionName: 'Player/Zoom[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e30b2ae1-a08c-42a1-97e7-98bdb1d74fc5
+    m_ActionName: 'Player/ToggeTime[/Keyboard/t]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -412,6 +372,7 @@ MonoBehaviour:
   CinemachineCameraTarget: {fileID: 8130315468197866582}
   TopClamp: 89
   BottomClamp: -89
+  IsCameraSpeedIndependent: 0
 --- !u!114 &4667203605758471209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,13 +581,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8820621712134064391}
     - target: {fileID: 5026016660537088855, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
-      propertyPath: gunAnimator
-      value: 
-      objectReference: {fileID: 6871867463651851284}
-    - target: {fileID: 5026016660537088855, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: weaponAnimator
       value: 
-      objectReference: {fileID: 6871867463651851284}
+      objectReference: {fileID: 1863065813806945833}
     - target: {fileID: 5871401946622711345, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -664,14 +621,14 @@ PrefabInstance:
       addedObject: {fileID: 5628062753228299330}
     - targetCorrespondingSourceObject: {fileID: 4912847934558400801, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6871867463651851284}
+      addedObject: {fileID: 1863065813806945833}
   m_SourcePrefab: {fileID: 100100000, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
 --- !u!1 &1894780682205343891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4912847934558400801, guid: 78f4273398fdbd74f9f17813e3cb4b86, type: 3}
   m_PrefabInstance: {fileID: 6802245057723384242}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &6871867463651851284
+--- !u!95 &1863065813806945833
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -747,7 +704,7 @@ MonoBehaviour:
   hitEffect: {fileID: 100002, guid: 3b1513bcb86426b4795879be6a128ed7, type: 3}
   ammoSlot: {fileID: 8820621712134064391}
   ammoType: 0
-  timeBetweenShots: 0.4
+  timeBetweenShots: 0.25
   weaponAnimator: {fileID: 5944457222675807583}
   ammoText: {fileID: 0}
   bulletPrefab: {fileID: 6804990658058999119, guid: 65c9f6563c561ee4e8905d1e6a32548b, type: 3}
